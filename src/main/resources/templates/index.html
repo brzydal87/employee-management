@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>Employee Management</h1>
+<button id="logoutBtn">Logout</button>
+
+<form id="employeeForm">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="text" name="surname" placeholder="Surname" required>
+    <input type="text" name="position" placeholder="Position" required>
+    <input type="date" name="dayJoined" placeholder="Day Joined" required>
+    <input type="number" name="salary" placeholder="Salary" required>
+    <input type="date" name="dateOfBirth" placeholder="Date of Birth" required>
+    <button type="submit">Add Employee</button>
+</form>
+<table id="employeeTable">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th data-sortable="true">Surname</th>
+        <th>Position</th>
+        <th>Day Joined</th>
+        <th data-sortable="true">Salary</th>
+        <th>Date of Birth</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Table rows will be added here -->
+    </tbody>
+</table>
+
+<!-- Popup modal -->
+<div id="employeePopup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Employee Details</h2>
+        <p id="employeeDetails"></p>
+    </div>
+</div>
+<!-- Edit Popup modal -->
+<div id="editEmployeePopup" class="popup">
+    <div class="popup-content">
+        <span class="close-edit">&times;</span>
+        <h2>Edit Employee</h2>
+        <form id="editEmployeeForm">
+            <input type="hidden" id="editEmployeeId">
+            <input type="text" id="editEmployeeName" placeholder="Name" required>
+            <input type="text" id="editEmployeeSurname" placeholder="Surname" required>
+            <input type="text" id="editEmployeePosition" placeholder="Position" required>
+            <input type="date" id="editEmployeeDayJoined" placeholder="Day Joined" required>
+            <input type="number" id="editEmployeeSalary" placeholder="Salary" required>
+            <input type="date" id="editEmployeeDateOfBirth" placeholder="Date of Birth" required>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
