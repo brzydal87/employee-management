@@ -11,4 +11,4 @@ RUN mvn clean package
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/credential-service.jar"]
+CMD ["java", "-jar", "target/employee-management.jar"]
