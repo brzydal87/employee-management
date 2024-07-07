@@ -10,7 +10,7 @@ COPY src ./src
 
 RUN chmod +x mvnw
 
-RUN ./mvnw clean package
+RUN mvn clean package
 
 EXPOSE 8080
 
